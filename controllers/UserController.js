@@ -109,7 +109,8 @@ const UserSinIn = async (req, res) => {
 
         res.cookie("token", JToken, {
             httpOnly: true,
-            secure: true, // Set to true if using HTTPS
+            secure: true, 
+            sameSite: 'None'// Set to true if using HTTPS
 
         }).status(200).json({
             message: "User login successful",
